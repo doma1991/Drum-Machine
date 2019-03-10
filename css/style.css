@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
+
+body {
+  background-color: #A7ADC6;
+  font-family: 'Permanent Marker', cursive;
+}
+
+h1 {
+  text-align: center;
+  margin: 1%;
+  color: #DB2763;
+  font-size: 510%;
+}
+
+#drum-machine {
+  padding-top: 5%;
+  padding-bottom: 5%;
+  border: solid #12EAEA 5px;
+  margin-top: 4%;
+  background-color: #DB2763;
+  border-radius: 10px;
+}
+
+.drum-pad {
+  border: solid #12EAEA 2px;
+  border-radius: 2px;
+  margin: 5px;
+  background-color: #B0DB43;
+  cursor: pointer;
+  color: #DB2763;
+}
+
+#display {
+  border: solid #12EAEA 2px;
+  border-radius: 2px;
+  padding: 10px;
+  padding-top: 30px;
+  margin: 5px;
+  background-color: #A7ADC6;
+  color: #DB2763;
+  text-align: center;
+}
+
+.drum-pad:hover {
+  
+}

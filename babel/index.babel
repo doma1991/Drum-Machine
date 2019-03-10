@@ -1,0 +1,320 @@
+const sounds = [
+{id: "Heater-1", letter: "Q", src: "https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3"}, 
+{id: "Dsc-Oh", letter: "W", src: "https://s3.amazonaws.com/freecodecamp/drums/Dsc_Oh.mp3"},
+{id: "Kick-n-hat", letter: "E", src: "https://s3.amazonaws.com/freecodecamp/drums/Kick_n_Hat.mp3"},
+{id: "Cev", letter: "A", src: "https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3"},
+{id: "Chord-1", letter: "S", src: "https://s3.amazonaws.com/freecodecamp/drums/Chord_1.mp3"},
+{id: "Give-us-a-light", letter: "D", src: "https://s3.amazonaws.com/freecodecamp/drums/Give_us_a_light.mp3"},
+{id: "Dry-Ohh", letter: "Z", src: "https://s3.amazonaws.com/freecodecamp/drums/Dry_Ohh.mp3"},
+{id: "Punchy-kick", letter: "X", src: "https://s3.amazonaws.com/freecodecamp/drums/punchy_kick_1.mp3"},
+{id: "Side-stick", letter: "C", src: "https://s3.amazonaws.com/freecodecamp/drums/side_stick_1.mp3"}
+];
+
+class DrumMachine extends React.Component {
+  constructor(){
+super();
+this.state = {
+display: "",
+sound: ""
+};
+    
+  }
+    
+    displayUpdateQ = () => {
+        this.setState({
+        display: sounds[0]["id"]
+        });
+      
+     const audio = event.target.querySelector('audio');
+     audio.play();
+     audio.currentTime = 0;
+    }
+    
+    displayUpdateW = () => {
+         this.setState({
+        display: sounds[1]["id"]
+        });
+      const audio = event.target.querySelector('audio');
+     audio.play();
+     audio.currentTime = 0;
+    }
+        displayUpdateE = () => {
+        this.setState({
+        display: sounds[2]["id"]
+        });
+        const audio = event.target.querySelector('audio');
+     audio.play();
+     audio.currentTime = 0;
+    }
+       
+       displayUpdateA = () => {
+         this.setState({
+        display: sounds[3]["id"]
+        });
+         const audio = event.target.querySelector('audio');
+     audio.play();
+     audio.currentTime = 0;
+    }
+        
+     displayUpdateS = () => {
+         this.setState({
+        display: sounds[4]["id"]
+        });
+       const audio = event.target.querySelector('audio');
+     audio.play();
+     audio.currentTime = 0;
+    }
+        
+    displayUpdateD = () => {
+         this.setState({
+        display: sounds[5]["id"]
+        });
+      const audio = event.target.querySelector('audio');
+     audio.play();
+     audio.currentTime = 0;
+    }
+        
+       displayUpdateZ = () => {
+         this.setState({
+        display: sounds[6]["id"]
+        });
+         const audio = event.target.querySelector('audio');
+     audio.play();
+     audio.currentTime = 0;
+    }
+        
+        displayUpdateX = () => {
+         this.setState({
+        display: sounds[7]["id"]
+        });
+          const audio = event.target.querySelector('audio');
+     audio.play();
+     audio.currentTime = 0;
+    }
+        
+       displayUpdateC = () => {
+         this.setState({
+        display: sounds[8]["id"]
+        });
+         const audio = event.target.querySelector('audio');
+     audio.play();
+     audio.currentTime = 0;
+       
+  }
+  render() {
+    return(
+      <div>
+      <h1>Drum Machine</h1>
+  <div class="container" id="drum-machine">
+    <div class="row justify-content-center align-items-center">
+      <div class="col-sm-3" id="display">{this.state.display}</div>
+    </div>
+    <div class="row justify-content-center align-items-center">
+      <div class="drum-pad col-sm-1 text-center" id="Q" onClick={this.displayUpdateQ}><audio class="clip" id="Heater-1" src={sounds[0]["src"]}></audio>Q</div>
+      <div class="drum-pad col-sm-1 text-center" id="W" onClick={this.displayUpdateW}><audio class="clip" id="Dsc-Oh" src={sounds[1]["src"]} ></audio>W</div>
+      <div class="drum-pad col-sm-1 text-center" id="E" onClick={this.displayUpdateE}><audio class="clip" id="Kick-n-hat" src={sounds[2]["src"]} ></audio>E</div>
+    </div>
+    <div class="row justify-content-center align-items-center">
+      <div class="drum-pad col-sm-1 text-center" id="A" onClick={this.displayUpdateA}><audio class="clip" id="Cev" src={sounds[3]["src"]} ></audio>A</div>
+      <div class="drum-pad col-sm-1 text-center" id="S" onClick={this.displayUpdateS}><audio class="clip" id="Chord-1" src={sounds[4]["src"]} ></audio>S</div>
+      <div class="drum-pad col-sm-1 text-center" id="D" onClick={this.displayUpdateD}><audio class="clip" id="Give-us-a-light" src={sounds[5]["src"]} ></audio>D</div>
+    </div>
+    <div class="row justify-content-center align-items-center">
+      <div class="drum-pad col-sm-1 text-center" id="Z" onClick={this.displayUpdateZ}><audio class="clip" id="Dry-Ohh" src={sounds[6]["src"]} ></audio>Z</div>
+      <div class="drum-pad col-sm-1 text-center" id="X" onClick={this.displayUpdateX}><audio class="clip" id="Punchy-kick" src={sounds[7]["src"]} ></audio>X</div>
+      <div class="drum-pad col-sm-1 text-center" id="C" onClick={this.displayUpdateC}><audio class="clip" id="Side-stick" src={sounds[8]["src"]}></audio>C</div>
+    </div>
+  </div>
+</div>
+    )
+  }
+};
+
+// class Q extends React.Component {
+//     constructor() {
+//     super();
+
+//   }
+  
+//   render() {
+//     return(
+//       <button class="drum-pad col-sm-1 text-center" id="Q" onClick={this.displayUpdateQ}>Q</button>
+//     )
+//   }
+// };
+
+// class W extends React.Component {
+//     constructor() {
+//     super();
+
+//   }
+  
+//   render() {
+//     return(
+//       <div class="drum-pad col-sm-1 text-center" id="W" onClick={this.displayUpdateW}>W</div>
+//     )
+//   }
+// };
+
+// class E extends React.Component {
+//     constructor() {
+//     super();
+ 
+//   }
+  
+//   render() {
+//     return(
+//       <div class="drum-pad col-sm-1 text-center" id="E" onClick={this.displayUpdateE}>E</div>
+//     )
+//   }
+// };
+
+// class A extends React.Component {
+//     constructor() {
+//     super();
+
+//   }
+  
+//   render() {
+//     return(
+//       <div class="drum-pad col-sm-1 text-center" id="A" onClick={this.displayUpdateA}>A</div>
+//     )
+//   }
+// };
+
+// class S extends React.Component {
+//     constructor() {
+//     super();
+
+//   }
+  
+//   render() {
+//     return(
+//       <div class="drum-pad col-sm-1 text-center" id="S" onClick={this.displayUpdateS}>S</div>
+//     )
+//   }
+// };
+
+// class D extends React.Component {
+//     constructor() {
+//     super(); 
+//   }
+  
+//   render() {
+//     return(
+//       <div class="drum-pad col-sm-1 text-center" id="D" onClick={this.displayUpdateD}>D</div>
+//     )
+//   }
+// };
+
+// class Z extends React.Component {
+//     constructor() {
+//     super();
+
+//   }
+  
+//   render() {
+//     return(
+//       <div class="drum-pad col-sm-1 text-center" id="Z" onClick={this.displayUpdateZ}>Z</div>
+//     )
+//   }
+// };
+
+// class X extends React.Component {
+//     constructor() {
+//     super();
+//   }
+  
+//   render() {
+//     return(
+//       <div class="drum-pad col-sm-1 text-center" id="X" onClick={this.displayUpdateX}>X</div>
+//     )
+//   }
+// };
+
+// class C extends React.Component {
+//   constructor() {
+//     super();
+//   }
+  
+//   render() {
+//     return(
+//       <div class="drum-pad col-sm-1 text-center" id="C" onClick={this.displayUpdateC}>C</div>
+//     )
+//   }
+// };
+
+// // class Display extends React.Component {
+// //   constructor(){
+// //     super();
+// //     this.state = {
+// //       display: ""
+// //     };
+    
+//   }
+    
+//     displayUpdateQ = () => {
+//         this.state = {
+//         display: "Q"
+//         };
+//     }
+    
+//     displayUpdateW = () => {
+//         this.state = {
+//         display: "W"
+//         };
+//     }
+//         displayUpdateE = () => {
+//         this.state = {
+//         display: "E"
+//         };
+//     }
+       
+//        displayUpdateA = () => {
+//         this.state = {
+//         display: "A"
+//         };
+//     }
+        
+//      displayUpdateS = () => {
+//         this.state = {
+//         display: "S"
+//         };
+//     }
+        
+//     displayUpdateD = () => {
+//         this.state = {
+//         display: "D"
+//         };
+//     }
+        
+//        displayUpdateZ = () => {
+//         this.state = {
+//         display: "Z"
+//         };
+//     }
+        
+//         displayUpdateX = () => {
+//         this.state = {
+//         display: "X"
+//         };
+//     }
+        
+//        displayUpdateC = () => {
+//         this.state = {
+//         display: "C"
+//         };
+       
+//   }
+ 
+//   render() {
+//     return(
+//       <div class="col-sm-3" id="display">{this.state.display}</div>
+//     )
+//   }
+// };
+
+ReactDOM.render(
+<DrumMachine />,
+document.getElementById("body")
+);
